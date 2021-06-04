@@ -1,0 +1,27 @@
+<!-- Shortcode para visualizar datos JSON, YAML y TOML-->
+{{ $url := .Get "url" }}
+{{ $file := getJSON $url }}
+
+<br>
+
+<ul class="dataFiles">
+
+    {{ range $i, $j := $file }}
+
+        {{ range $j, $k := $j }}
+
+            {{ range $k }}
+
+                {{ $v := . }}
+
+                <li>
+                    {{ index $v}}<br>
+                </li> 
+                
+            {{ end }}
+        
+        {{ end }}
+
+    {{ end }}
+
+</ul>

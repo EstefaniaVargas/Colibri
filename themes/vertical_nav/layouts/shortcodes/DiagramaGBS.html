@@ -1,0 +1,22 @@
+<!-- Shortcode para el diagrama en mermaid-->
+<!-- Como poner links: https://stackoverflow.com/questions/41960529/how-to-add-a-link-in-a-mermaid-node-description -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
+<div class="mermaid">
+
+    graph TD
+        A([IBM Global <br> Business Services]):::GBS --> B(Se basa en el conocimiento y la experiencia del negocio,<br> las capacidades de investigación y la tecnología mundial<br> disponible para ayudar a lograr sus objetivos.):::texto
+        B --> C(Las empresas pueden obtener mejoras reales y tangibles <br> con la ayuda de IBM GBS. Ofreciendo un amplio conjunto<br> de servicios de consultoría que le ayudarán a conseguir <br> sus objetivos empresariales, que se adaptan a sus necesidades.):::texto
+        C --> D[Servicios de la nube híbrida]:::indice
+        C --> E[Transformación de la cadena<br> de suministro y las finanzas]:::indice
+        C --> F[Servicios de transformación <br> de clientes]:::indice
+        C --> G[Transformación del talento]:::indice
+
+        classDef GBS fill:#18D2AF,stroke:#005545,font-size:17px
+        classDef texto fill:#20FFD5,stroke:#005545
+        classDef indice fill:#C6F7EE,stroke:#005545
+        click GBS "https://www.ibm.com/services/consulting" "This is a link"
+</div>

@@ -1,0 +1,30 @@
+<!--Leer archivos txt-->
+{{ $nombre := .Get 0}}
+{{ $documento := .Get 1}}
+{{ $filetxt := readFile $documento }}
+
+<section class="dataJSON">
+    <br>
+    <br>
+
+    <b>
+        {{ $nombre }}
+    </b>
+
+    <ul class="split1JSON">
+    {{ range $split1 := split $filetxt ": {" }}
+        <li>
+            <ul class="split2JSON">
+                <li>
+                    {{ range $split2 := split $split1 "}," }}
+                        
+                        {{ . }}
+                        
+                    {{ end }}
+                </li>
+            </ul>
+        </li>
+    {{ end }}
+    </ul>
+
+</section>
