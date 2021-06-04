@@ -1,0 +1,12 @@
+{{ $url := .Get "url" }}
+{{ $file := getJSON $url }}
+
+<br>
+
+<ul class="dataFiles">
+    {{ range $file }}
+    <li>
+        {{.}}<br><br>
+    </li>
+    {{ end }}
+</ul>

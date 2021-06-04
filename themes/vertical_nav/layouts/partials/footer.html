@@ -1,0 +1,34 @@
+<footer class="footer">
+    <div class="footer__content">
+
+        <div class="footer_izquierda">
+
+            <img src="{{ .Site.BaseURL }}/images/IBM.png" alt="Logo" width="60%x">
+
+        </div>
+
+        <div class="footer_centro">
+            <section>
+                <h1>Contáctanos</h1>
+                <h3>Informaciones generales</h3>
+                Bogotá: +57 1 390 1000 <br>
+                Cali: +57 2 485 0495 <br>
+                Barranquilla: +57 5 385 3064 <br>
+                Medellín CEOH y Corfinsura: +57 4 604 6650 <br>
+                01 8000 917 555 (CO Nacional) <br>
+            
+            </section>				
+        </div>
+
+        <div class="footer_derecha">
+            <section>
+                <h3>Sedes empresariales:</h3>
+                Cra 53 # 100-25 Bogotá <br>
+                PBX: +57 1 390 1000 (Bogotá) <br>
+                <br>
+                &copy;{{ dateFormat "2006" now }} {{ .Site.Title }}
+            </section>
+        </div>
+
+    </div>						
+</footer>
